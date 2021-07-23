@@ -1,0 +1,10 @@
+{
+	"baseUrl": "https://www.pecodesoftware.com/qa-portal/registerlogin/registerlogin.php",
+	"viewportWidth": 1920,
+	"viewportHeight": 1080,
+	"defaultCommandTimeout": 25000,
+	"responseTimeout" : 20000,
+	"taskTimeout": 50000,
+	"chromeWebSecurity": false,
+	"pageLoadTimeout": 40000
+}
