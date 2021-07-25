@@ -27,3 +27,15 @@ export function checkEmptyFields(){
 
 }
 
+export function passwordFieldEmpty(){
+    login.usernameCredentials().should('be.enabled').and('be.visible').clear().type(enviromentElents.user.email)
+    login.loginButton().should('exist').click()
+    login.helpMessage().should('be.visible').and('have.text', emptyPassword)
+}
+
+export function usernameFieldEmpty(){
+    login.usernameCredentials().should('be.enabled').and('be.visible').clear()
+    login.passwordCredentials().should('be.enabled').and('be.visible').clear().type(enviromentElents.user.password)
+    login.loginButton().should('exist').click()
+    login.helpMessage().should('be.visible').and('have.text', emptyUsername)
+}

@@ -14,4 +14,10 @@ describe('tests for login page',() => {
         checkEmptyFields()
     })
 
+    it('empty password field',() => {
+        passwordFieldEmpty()
+    })
+    it('empty username field',() =>{
+        usernameFieldEmpty()
+    })
 })
