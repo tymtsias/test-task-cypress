@@ -1,4 +1,3 @@
-/// <reference types="cypress" />
 import {checkEmptyFields, openLoginPage, passwordFieldEmpty, successfullCredentials, usernameFieldEmpty} from '../../functions/login_func'
 
 describe('tests for login page',() => {
