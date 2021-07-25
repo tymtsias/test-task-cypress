@@ -3,6 +3,8 @@ import Login from "../pages/login";
 const login = new Login()
 let enviromentElents = Cypress.env();
 const helpMessage = "No account found with that username."
+const emptyUsername = "Please enter username."
+const emptyPassword = "Please enter your password."
 
 export function openLoginPage(){
     cy.visit(enviromentElents.url)
@@ -16,3 +18,12 @@ export function successfullCredentials(){
     login.loginButton().should('exist').click()
     login.helpMessage().should('be.visible').and('have.text', helpMessage)
 }
+
+export function checkEmptyFields(){
+    login.usernameCredentials().should('be.enabled').and('be.visible').clear()
+    login.passwordCredentials().should('be.enabled').and('be.visible').clear()
+    login.loginButton().should('exist').click()
+    login.helpMessage().should('be.visible').and('have.text', emptyUsername + emptyPassword)
+
+}
+

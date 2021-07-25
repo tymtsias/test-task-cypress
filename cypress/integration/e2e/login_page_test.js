@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import {openLoginPage, successfullCredentials} from '../../functions/login_func'
+import {checkEmptyFields, openLoginPage, passwordFieldEmpty, successfullCredentials, usernameFieldEmpty} from '../../functions/login_func'
 
 describe('tests for login page',() => {
     it('check if login page is opened',() => {
@@ -9,4 +9,9 @@ describe('tests for login page',() => {
     it('entering credentials',() => {
         successfullCredentials()
     })
+
+    it('empty fields',() => {
+        checkEmptyFields()
+    })
+
 })
