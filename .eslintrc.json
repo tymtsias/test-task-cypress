@@ -1,0 +1,21 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "airbnb-base"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+
+    "plugins": ["sort-destructure-keys"],
+
+    "rules": { 
+        "sort-destructure-keys/sort-destructure-keys": [2, {"caseSensitive": false}],
+        "sort-keys":"error",
+        "linebreak-style":["error", "windows"]
+    }
+}
